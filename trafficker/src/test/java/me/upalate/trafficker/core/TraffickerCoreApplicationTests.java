@@ -1,4 +1,4 @@
-package com.upalate.trafficker.core;
+package me.upalate.trafficker.core;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
