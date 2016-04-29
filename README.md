@@ -8,3 +8,12 @@ Gradlew will build the jar for you:
 
 To decompress the jar:
 `java -jar build/libs/trafficker-<VERSION>-SNAPSHOT.jar`
+
+
+# Running the application:
+
+`gradle bootRun`
+
+To access the hello world REST api:
+
+`http://localhost:8080/greeting`
