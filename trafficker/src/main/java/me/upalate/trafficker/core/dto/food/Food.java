@@ -23,7 +23,7 @@ public class Food {
 	/**
      * A new Food resource to represent a food item in our system.
      * Each Food is a representation of its nutritional contents.
-    */
+     */
 	public Food (String name,
                  double calories,
                  double fat,

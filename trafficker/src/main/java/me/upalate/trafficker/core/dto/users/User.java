@@ -25,7 +25,7 @@ public class User {
 		this.firstName = firstName;
 	}
 
-	public User(int id,
+	public User(long id,
 				String firstName,
 				String lastName,
 				Date dob,
