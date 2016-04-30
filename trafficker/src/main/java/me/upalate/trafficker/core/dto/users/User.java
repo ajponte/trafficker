@@ -1,4 +1,8 @@
-package me.upalate.trafficker.users;
+package me.upalate.trafficker.core.dto.users;
+
+import me.upalate.trafficker.core.dto.food.Food;
+
+import java.util.Date;
 
 /**
  * Resource to represent a User in our system.
@@ -10,20 +14,25 @@ public class User {
 	private long id;
 	private String firstName;
 	private String lastName;
-	private Data dob;
+	private Date dob;
 	private char sex;
 	private double weight;
 	private double height;
 	private Food[] favoriteFoods;
 
-	public User (int id,
-					String firstName,
-					String lastName,
-					double dob,
-					double weight,
-					double height,
-					char sex
-					private Food[] favoriteFoods) {
+	public User(long id, String firstName) {
+		this.id = id;
+		this.firstName = firstName;
+	}
+
+	public User(int id,
+				String firstName,
+				String lastName,
+				Date dob,
+				double weight,
+				double height,
+				char sex,
+				Food[] favoriteFoods) {
 		this.id = id;
 		this.firstName = firstName;
 		this.dob = dob;

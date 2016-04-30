@@ -1,4 +1,4 @@
-package me.upalate.trafficker.core.food;
+package me.upalate.trafficker.core.dto.food;
 
 /**
  * Represents one of the common tastes of foods.
