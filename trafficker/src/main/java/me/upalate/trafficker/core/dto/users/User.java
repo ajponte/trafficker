@@ -20,6 +20,11 @@ public class User {
 	private double height;
 	private Food[] favoriteFoods;
 
+	/**
+	 * Empty constructor for hibernate.
+	 */
+	public User() {}
+
 	public User(long id, String firstName) {
 		this.id = id;
 		this.firstName = firstName;
@@ -40,6 +45,10 @@ public class User {
 		this.height = height;
 		this.sex = sex;
 		this.favoriteFoods = favoriteFoods;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
 	public long getId() {
