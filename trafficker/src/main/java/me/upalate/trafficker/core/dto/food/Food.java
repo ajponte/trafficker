@@ -6,6 +6,7 @@ import java.util.Map;
  * Food resource.
  */
 public class Food {
+   private long id;
 	private String name;
 	private double calories;
 	private double fat;
@@ -19,7 +20,14 @@ public class Food {
      *  e.g. {UNAMI: 0.4, SALTY: 0.4, SWEET: 0.1, SOUR: 0.1, SPICY: 0}
      */
 	private Map<TasteType, Double> tasteMap;
-	
+
+   public Food(long id,
+               String name) {
+      this.id = id;
+      this.name = name;
+
+   }
+
 	/**
      * A new Food resource to represent a food item in our system.
      * Each Food is a representation of its nutritional contents.
@@ -42,6 +50,10 @@ public class Food {
         this.tasteMap = tasteMap;
 	}
 
+    public long getId() {
+        return id;
+    }
+   
     public String getName() {
         return name;
     }
