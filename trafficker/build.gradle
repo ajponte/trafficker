@@ -3,6 +3,7 @@ buildscript {
         springBootVersion = '1.2.7.RELEASE'
     }
     repositories {
+		  mavenLocal()
         mavenCentral()
     }
     dependencies {
@@ -28,15 +29,17 @@ jar {
     baseName = 'trafficker'
     version = '0.0.1-SNAPSHOT'
 }
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
 
 repositories {
+	 mavenLocal()
     mavenCentral()
 }
 
 
 dependencies {
+    compile("org.springframework.boot:spring-boot-starter")
     compile('org.springframework.boot:spring-boot-starter-amqp')
     compile('org.springframework.boot:spring-boot-starter-data-mongodb')
     compile('org.springframework.boot:spring-boot-starter-redis')
