@@ -5,6 +5,8 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 /**
+ * Object to perform logging operations.
+ *
  * TODO: WARN and NOTICE
  */
 public class UpalateLogger {
@@ -82,6 +84,13 @@ public class UpalateLogger {
       this.logP(Level.INFO, pattern, params);
    }
 
+   /**
+    * Logs the message and the throwable.
+    *
+    * @param level The log level
+    * @param message The message to log
+    * @param throwable The throwable to log
+    */
    public void log(Level level,
                    Object message,
                    Throwable throwable) {
@@ -118,7 +127,14 @@ public class UpalateLogger {
       }
    }
 
-   void formatMessage(StringBuilder sb, String pattern, Object[] params) {
+   /**
+    * Formats the message shown in the log with the parameters.
+    *
+    * @param sb The {@link StringBuilder} object used to build the message
+    * @param pattern The message we are formatting
+    * @param params The parameters we are formatting the message with
+    */
+   private void formatMessage(StringBuilder sb, String pattern, Object[] params) {
 
       int nextParam = 0;
       boolean sawStart = false;
