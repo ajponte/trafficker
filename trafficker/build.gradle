@@ -39,7 +39,7 @@ repositories {
 
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework.boot:spring-boot-starter-logging")
     compile('org.springframework.boot:spring-boot-starter-amqp')
     compile('org.springframework.boot:spring-boot-starter-data-mongodb')
     compile('org.springframework.boot:spring-boot-starter-redis')
@@ -51,6 +51,7 @@ dependencies {
     compile('org.javassist:javassist:3.15.0-GA')
     compile('mysql:mysql-connector-java:5.1.31')
     compile('commons-dbcp:commons-dbcp:1.4')
+	 testCompile('junit:junit')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 

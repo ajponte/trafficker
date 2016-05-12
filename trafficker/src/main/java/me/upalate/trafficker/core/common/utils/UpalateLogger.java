@@ -203,7 +203,6 @@ public class UpalateLogger {
             else {
                sb.append("<undefined param>");
             }
-
             // update state
             sawStart = false;
          }
