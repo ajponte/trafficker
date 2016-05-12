@@ -21,7 +21,9 @@ public class UpalateLogger {
     * @param appenders The appenders that should be attached to this logger (and
     *                  its children), if any.
     */
-   protected UpalateLogger(String name, boolean additivity, String... appenders) {
+   protected UpalateLogger(String name,
+                           boolean additivity,
+                           String... appenders) {
       boolean exists = LogManager.getLogger(name) != null;
       logger = Logger.getLogger(name);
       logger.setAdditivity(additivity);
