@@ -18,12 +18,9 @@ public class UpalateLogger {
     *
     * @param name The name of the logger.
     * @param additivity True only if this logger inherits from its parent.
-    * @param appenders The appenders that should be attached to this logger (and
-    *                  its children), if any.
     */
    protected UpalateLogger(String name,
-                           boolean additivity,
-                           String... appenders) {
+                           boolean additivity) {
       boolean exists = LogManager.getLogger(name) != null;
       logger = Logger.getLogger(name);
       logger.setAdditivity(additivity);
@@ -31,8 +28,6 @@ public class UpalateLogger {
 
    /**
     * Factory method to get a new UpalateLogger.
-    * By default, loggers will be additive and will
-    * inherit appenders.
     *
     * @param name The name of the logger
     * @return A new UpalateLogger
@@ -43,72 +38,12 @@ public class UpalateLogger {
 
    /**
     * Factory method to get a new UpalateLogger.
-    * By default, loggers will be additive.
-    *
-    * @param name The name of logger
-    * @param appenders The appenders which should be attached to
-    *                  this logger (and its children), if any
-    * @return A new UpalateLogger
-    */
-   public static UpalateLogger getLogger(String name,
-                                         String... appenders) {
-      return new UpalateLogger(name, true, appenders);
-   }
-
-   /**
-    * Factory method to get a new UpalateLogger.
-    *
-    * @param name The name of the logger
-    * @param additivity True only if this logger inherits from its parent
-    * @param appenders The appenders which should be attached to this
-    *                  logger (and its children), if any
-    * @return A new UpalateLogger
-    */
-   public static UpalateLogger getLogger(String name,
-                                         boolean additivity,
-                                         String... appenders) {
-      return new UpalateLogger(name, additivity, appenders);
-   }
-
-   /**
-    * Factory method to get a new UpalateLogger.
-    * By default, loggers will be additive and will inherit appenders.
     *
     * @param clazz The class to use as the name of the logger
     * @return A new UpalateLogger
     */
    public static UpalateLogger getLogger(Class clazz) {
       return getLogger(clazz.getName());
-   }
-
-   /**
-    * Factory method to get a new UpalateLogger.
-    * By default, loggers will be additive
-    *
-    * @param clazz The class to use as the name of the logger
-    * @param appenders The appenders which should be attached to
-    *                  this logger (and its children), if any
-    * @return A new UpalateLogger
-    */
-   public static UpalateLogger getLogger(Class clazz,
-                                         String... appenders) {
-      return getLogger(clazz.getName(), true, appenders);
-   }
-
-   /**
-    * Factory method to get a new UpalateLogger.
-    *
-    * @param clazz The class to use to name the logger
-    * @param additivity True only if this logger inherits from
-    *                   its parent
-    * @param appenders The appenders which should be atteched to logger (and
-    *                  its children), if any
-    * @return The created or retrieved logger
-    */
-   public static UpalateLogger getLogger(Class clazz,
-                                         boolean additivity,
-                                         String... appenders) {
-      return getLogger(clazz.getName(), additivity, appenders);
    }
 
    public boolean isDebugEnabled() {
