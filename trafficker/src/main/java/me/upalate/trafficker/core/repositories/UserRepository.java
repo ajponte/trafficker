@@ -1,7 +1,7 @@
 package me.upalate.trafficker.core.repositories;
 
 /**
- * Created by alan.ponte on 5/2/16.
+ * We will probably be using the repository pattern.
  */
 public class UserRepository {
 }
