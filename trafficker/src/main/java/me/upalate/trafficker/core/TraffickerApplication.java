@@ -1,8 +1,8 @@
 package me.upalate.trafficker.core;
 
-import me.upalate.logging.UpalateLogger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import me.upalate.logging.UpalateLogger;
 
 @SpringBootApplication
 public class TraffickerApplication {
